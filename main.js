@@ -32,13 +32,16 @@ let listElements = [
   "Palworld",
 ];
 
-let createNavLists = () => {
-  for (i = 0; i < listElements.length; i++) {
+const createNavLists = () => {
+  let fragment = document.createDocumentFragment();
+  for (let i = 0; i < listElements.length; i++) {
     let newList = document.createElement("li");
     newList.setAttribute("id", listElements[i]);
     newList.classList = "nav-item";
-    getNavUL.appendChild(newList);
+    fragment.appendChild(newList);
   }
+
+  getNavUL.appendChild(fragment);
 };
 
 createNavLists();
@@ -49,7 +52,7 @@ list.forEach((listItem, index) => {
   let anchorElement = document.createElement("a");
   anchorElement.className = "nav-link";
 
-  // This is the same the ternary operator
+  // This is the same as the ternary operator
   // if (index === 0) {
   //   anchorElement.href = "index.html";
   // } else if (index == 5) {
@@ -57,6 +60,7 @@ list.forEach((listItem, index) => {
   //  } else {
   //   anchorElement.href = "#";
   // }
+
   anchorElement.href =
     index === 0
       ? "index.html"
@@ -67,7 +71,7 @@ list.forEach((listItem, index) => {
   anchorElement.className = index === 0 ? "nav-link active" : "nav-link";
   anchorElement.target = index === 5 ? "_blank" : "";
 
-  // Changed this outside utilizing lastChild
+  // Moved this outside to utile lastChild
   // anchorElement.rel = index === 5 ? "noopener noreferrer" : undefined;
 
   anchorElement.textContent = listElements[index];
@@ -196,7 +200,7 @@ contactElement.addEventListener("click", (event) => {
 });
 
 const closeContactForm = () => {
-  let modalOverlay = document.querySelector(".modal-overlay");
+  let modalOverlay = document.querySelector("modal-overlay");
   document.body.removeChild(modalOverlay);
 };
 

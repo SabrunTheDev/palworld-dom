@@ -52,8 +52,8 @@ list.forEach((listItem, index) => {
   let anchorElement = document.createElement("a");
   anchorElement.className = "nav-link";
 
-  // This is the same as the ternary operator
-  // if (index === 0) {
+  // This is the  as the ternary operator
+  // if (index === 0)same {
   //   anchorElement.href = "index.html";
   // } else if (index == 5) {
   // anchorElement.href = "https://store.steampowered.com/app/1623730/Palworld/";
@@ -71,7 +71,7 @@ list.forEach((listItem, index) => {
   anchorElement.className = index === 0 ? "nav-link active" : "nav-link";
   anchorElement.target = index === 5 ? "_blank" : "";
 
-  // Moved this outside to utile lastChild
+  // Moved this outside to utilize lastChild
   // anchorElement.rel = index === 5 ? "noopener noreferrer" : undefined;
 
   anchorElement.textContent = listElements[index];

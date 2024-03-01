@@ -200,8 +200,8 @@ contactElement.addEventListener("click", (event) => {
 });
 
 const closeContactForm = () => {
-  let modalOverlay = document.querySelector("modal-overlay");
-  document.body.removeChild(modalOverlay);
+  let modalOverlay = document.querySelector(".modal-overlay");
+  modalOverlay.remove();
 };
 
 const submitForm = () => {

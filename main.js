@@ -2,6 +2,7 @@ const worldEl = document.querySelector("body");
 console.log(worldEl);
 worldEl.style.backgroundImage =
   "url('https://cdn5.idcgames.com/storage/image/1448/game_home_bg_section_2/default.jpg')";
+worldEl.style.height = "100vh"
 
 // let palworld = document.getElementById("title-top");
 // palworld.style.textAlign = "center";
